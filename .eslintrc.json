@@ -1,0 +1,85 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "ignorePatterns": [
+    "node_modules/**"
+  ],
+  "extends": [
+    "prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "impliedStrict": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "import",
+    "sort-keys-fix",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", ["parent", "sibling"], "index"],
+        "pathGroups": [
+          {
+            "pattern": "angular",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always"
+      }
+    ],
+    "sort-keys-fix/sort-keys-fix": "error",
+    "array-callback-return": "error",
+    "for-direction": "error",
+    "getter-return": "error",
+    "no-await-in-loop": "error",
+    "no-compare-neg-zero": "error",
+    "no-const-assign": "error",
+    "no-debugger": "error",
+    "no-dupe-args": "error",
+    "no-dupe-keys": "error",
+    "no-duplicate-imports": "error",
+    "no-empty-pattern": "error",
+    "no-empty-function": "error",
+    "no-func-assign": "error",
+    "no-invalid-regexp": "error",
+    "no-self-assign": "error",
+    "no-self-compare": "error",
+    "no-undef": "error",
+    "no-unexpected-multiline": "error",
+    "no-unreachable": "error",
+    "no-unused-vars": "error",
+    "no-use-before-define": "error",
+    "use-isnan": "error",
+    "eqeqeq": "error",
+    "default-case": "error",
+    "no-continue": "error",
+    "no-global-assign": "error",
+    "no-var": "error",
+    "no-useless-return": "error",
+    "prefer-const": "error",
+    "prefer-numeric-literals": "error",
+    "prefer-arrow-callback": "error",
+    "sort-keys": "error",
+    "sort-vars": "error",
+    "spaced-comment": "error"
+  }
+}
